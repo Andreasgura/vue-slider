@@ -9,6 +9,11 @@ createApp({
       }
     },
     methods : {
-
+        showPrev(){
+            this.indexofactive === 0 ? this.indexofactive = slides.length - 1 : this.indexofactive--
+        },
+        showNext(){
+            this.indexofactive === slides.length - 1 ? this.indexofactive = 0 : this.indexofactive++
+        }
     }
   }).mount('#app');

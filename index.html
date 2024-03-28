@@ -32,8 +32,8 @@
                 </div>
 
                 <div class="thumbs">
-                    <div class="prev"></div>
-                    <div class="next"></div>
+                    <div class="prev" @click.prevent="showPrev"></div>
+                    <div class="next" @click.prevent="showNext" ></div>
                     <div class="thumb" :class="{ active : index === indexofactive }" v-for="(slide, index) in slides">
                         <img :src="slide.image" :alt="slide.title"/>
                     </div>
