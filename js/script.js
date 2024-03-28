@@ -5,9 +5,10 @@ createApp({
     data() {
       return {
         slides,
+        indexofactive : 0
       }
     },
     methods : {
-        
+
     }
   }).mount('#app');
