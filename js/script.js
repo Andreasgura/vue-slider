@@ -14,6 +14,9 @@ createApp({
         },
         showNext(){
             this.indexofactive === slides.length - 1 ? this.indexofactive = 0 : this.indexofactive++
+        },
+        showClicked(index){
+            this.indexofactive = index
         }
-    }
+    },
   }).mount('#app');
