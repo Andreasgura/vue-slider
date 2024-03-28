@@ -15,13 +15,14 @@
 
     <div id="app">
 
-        <div class="container">
+        <div class="container" v-on:mouseover = "pouseCarosell"
+        v-on:mouseleave = "playCarosell">
             <div class="slider-wrapper" tabindex="0">
 
                 <div class="item">
-                    <img :src="slides[indexofactive].image" alt="Spiderman" />
+                    <img :src="slides[indexofactive].image" :alt="slides[indexofactive].title" />
                     <div class="text">
-                        <h3>Spiderman</h3>
+                        <h3>{{slides[indexofactive].title}}</h3>
                         <p>
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit
                             tempore aliquid deleniti aut

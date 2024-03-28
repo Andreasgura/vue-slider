@@ -5,7 +5,8 @@ createApp({
     data() {
       return {
         slides,
-        indexofactive : 0
+        indexofactive : 0,
+        poused : null,
       }
     },
     methods : {
@@ -17,6 +18,15 @@ createApp({
         },
         showClicked(index){
             this.indexofactive = index
+        },
+        pouseCarosell (){
+            clearInterval(this.poused)
+        },
+        playCarosell (){
+            this.poused = setInterval(this.showNext, 3000)
         }
     },
+    mounted () { 
+            this.poused = setInterval(this.showNext, 3000);             
+    }
   }).mount('#app');
